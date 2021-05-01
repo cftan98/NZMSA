@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { InputNumber } from 'antd';
 
-export default function Counter() {
-    const [value, setValue] = useState(0);
+export default function Counter(props) {
 
     return (
-        <InputNumber min={0} max={9} defaultValue={value} />
+        <InputNumber min={0} max={9} value={props.num} onChange={(e) => props.handleChange(e)} />
     )
 }
