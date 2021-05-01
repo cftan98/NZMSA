@@ -28,14 +28,17 @@ function App() {
 
   return (
     <div>
-      <Row justify='center' style={{ marginTop: "20%" }}>
-        <Col span={2}>
+      <Row justify='center'  style={{ marginTop: "20%", marginBottom: '30px'}}>
+        <h1>Welcome to my locker</h1>
+      </Row>
+      <Row justify='center'>
+        <Col>
           <Counter num={value1} handleChange={(e) => setValue1(e)} />
         </Col>
-        <Col span={2}>
+        <Col>
           <Counter num={value2} handleChange={(e) => setValue2(e)} />
         </Col>
-        <Col span={2}>
+        <Col>
           <Counter num={value3} handleChange={(e) => setValue3(e)} />
         </Col>
       </Row>
