@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
 import Counter from './components/Counter';
@@ -9,6 +9,13 @@ function App() {
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
   const [value3, setValue3] = useState(0);
+
+  useEffect(() => {
+    const result = value1 * 100 + value2 * 10 + value3
+    if(result === PASSCODE){
+      alert("!")
+    }
+  }, [value1, value2, value3])
 
   return (
     <div>
